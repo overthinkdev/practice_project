@@ -1,0 +1,76 @@
+  /* 임시 테스트를위해서 */
+svg{
+  display:none;
+}
+
+    /* common */
+header, nav, .homemenu, section, .mainlogo, footer{
+  margin : 0 auto;
+}
+
+    /* Header */
+header {
+  height:210px;
+}
+
+    /* 로그인 */
+.loginbox{
+  width:120px;
+  height:40;
+}
+.loginbutton {
+  height:38px;
+  padding: 6px 7px;
+}
+.loginbutton svg{
+  width:40px;
+  height:26;
+}
+
+/* Header_homemenu */
+header nav {
+  margin:0 auto;
+  height: 39px;
+  text-align:center;
+  background: #f7f7f7;
+}
+
+/* homemenu */
+.h_menu{
+  display:inline-block;
+  margin:0 auto;
+}
+
+.homemenu div p{
+  height: 31px;
+  text-align:center;
+  font-weight: bold;
+}
+
+.homemenu div p:hover{
+  color:#8fd3E8;
+  font-weight: bold;
+  /* transition-delay: 0.5s; */
+}
+
+
+
+/* section */
+.mainlogo{
+  height:660px;
+  margin:0 auto;
+  background-image: url("./image/test2.webp")
+}
+
+.mainlog span{
+  font-size:16px;
+}
+  .mainlog span>h3{
+    font-weight: bold;
+    font-size:70px;
+  }
+
+/* 푸터 맨밑에 */
+.footermenu{
+  height: 300px;
+}
