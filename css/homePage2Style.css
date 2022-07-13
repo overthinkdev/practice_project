@@ -2,20 +2,26 @@
 
 /* 레이아웃 해상도 */
 #gnb {
+  position:fixed;
+  right:1vw;
+  width: 100vw;
   height: 40px;
   background-color: #000000;
 }
 header {
+  width:100vw;
   height: 150px;
   background-color: #222222;
 }
 nav {
+  width: 100vw;
   height: 39px;
   background-color: #444444;
 }
 
 /* 컨텐츠 컨테이너 */
 #container {
+  position: relative;
   width: 100vw;
   overflow: hidden;
 }
@@ -47,15 +53,35 @@ nav {
   width: 100%;
 }
 /* 이미지슬라이드버튼 */
-.prev_slide,
-.next_slide {
-  position: absolute;
-  left:1%
-  cursor:pointer;
+.slide_btn_box{
+  position:absolute;
+  width:100%;
+  top:15vw;
+}
+.prev_slide_btn img,
+.next_slide_btn img{
+
+  filter: invert(100%) sepia(5%) saturate(5791%) hue-rotate(342deg) brightness(118%) contrast(102%);
+  padding:0;
+  width:20px;
+  height:50px;
 }
 
-.prev_slide:hover,
-.next_slide:hover {
+.prev_slide_btn img:hover,
+.next_slide_btn img:hover {
+  transition: all 0.5s ease 0s;
+  filter: invert(41%) sepia(12%) saturate(28%) hue-rotate(317deg) brightness(92%) contrast(92%);
+  cursor: pointer;
+
+}
+
+.prev_slide_btn img{
+  position: absolute;
+  left:1vw;
+}
+.next_slide_btn img{
+  position:absolute;
+  right:1vw;
 }
 
 /* PC (해상도 1025 ~ 1440px)*/
