@@ -1,0 +1,79 @@
+/* 반응형 css 만들기 */
+
+/* 레이아웃 해상도 */
+#gnb {
+  height: 40px;
+  background-color: #000000;
+}
+header {
+  height: 150px;
+  background-color: #222222;
+}
+nav {
+  height: 39px;
+  background-color: #444444;
+}
+
+/* 컨텐츠 컨테이너 */
+#container {
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* 스킵 네비게이션 */
+#skip_nav {
+}
+#skip_nav a {
+  position: absolute;
+  left: 0px;
+  top: 0;
+}
+
+/* 이미지 컨테이너 */
+.image_container {
+  width: 300vw;
+  transition: transform 0.5s;
+  
+}
+.image_container::after{
+  clear: both;
+}
+
+.image_box {
+  width: 100vw;
+  float: left;
+}
+.image_box img {
+  width: 100%;
+}
+/* 이미지슬라이드버튼 */
+.prev_slide,
+.next_slide {
+  position: absolute;
+  left:1%
+  cursor:pointer;
+}
+
+.prev_slide:hover,
+.next_slide:hover {
+}
+
+/* PC (해상도 1025 ~ 1440px)*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+}
+
+/* 테블릿 (해상도 768px ~ 1023px)*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-color: #222;
+  }
+}
+
+/* 모바일 (해상도 480px ~ 767px)*/
+@media screen and (max-width: 767px) {
+  body {
+    background-color: #333;
+  }
+}
+
+/*---------------------------------------------------------------------------------------------------*/
