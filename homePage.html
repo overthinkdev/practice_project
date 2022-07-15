@@ -1,138 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SITTERMON</title>
+    <!-- 파비콘 -->
+    <link rel="icon" href="./img/sittermon_favicon.ico" />
+    <!-- 아이콘 -->
     <script
       src="https://kit.fontawesome.com/2048a0e319.js"
       crossorigin="anonymous"
     ></script>
-    <link type="text/css" rel="stylesheet" href="css/homePageStyle.css" />
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mingzat&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./css/homePage.css" />
+    <!-- JS -->
+    <script src="./js/homePageSlideImg.js" defer></script>
+    <script src="./js/homePageNav.js" defer></script>
   </head>
   <body>
-    <div id="homepage">
-      <!-- header -->
-      <div class="gnb">
-        <div class="loginbox">
-          <a href="#" class="homepage_login"
-            ><i class="fa-solid fa-circle-user"></i> Log In</a
-          >
-          <a href="#" class="login_menu"> <i class="fa-solid fa-bars"></i></a>
-        </div>
-      </div>
-
-      <header>
-        <a href="#"><i class="fa-solid fa-shield-dog"></i><br />하집사</a>
-      </header>
-      <!-- //header -->
-
-      <!-- nav -->
-      <nav>
-        <div class="homedrop_menu">
-          <ul>
-            <li>
-              <a href="#" class="drop_menu1">Home</a>
-              <ul>
-                <li><a href="#" class="drop_menu2">공지사항</a></li>
-              </ul>
-            </li>
-            <li><a href="#" class="drop_menu2">고객센터</a></li>
-            <li>
-              <a href="#" class="drop_menu3">게시판</a>
-              <ul>
-                <li><a href="#" class="drop_menu2">회원리뷰</a></li>
-                <li><a href="#" class="drop_menu2">실시간찾기</a></li>
-                <li><a href="#" class="drop_menu2">실시간등록</a></li>
-              </ul>
-            </li>
-            <li><a href="#" class="drop_menu4">갤러리</a></li>
-          </ul>
-        </div>
-      </nav>
-      <!-- //nav -->
-
-      <!-- section -->
-      <section>
-        <div id="main--container">
-          <!-- image--container -->
-          <div id="image--container">
-            <div class="image-box">
-              <img src="../practiceproject/img/img01.webp" alt="이미지1" />
-            </div>
-            <div class="image-box">
-              <img src="../practiceproject/img/img02.webp" alt="이미지2" />
-            </div>
-            <div class="image-box">
-              <img src="../practiceproject/img/img03.webp" alt="이미지3" />
-            </div>
-            <!-- //image--container -->
-          </div>
-          <button id="prev_btn">
-            <i class="fa-solid fa-circle-chevron-left"></i>
-          </button>
-          <button id="next_btn">
-            <i class="fa-solid fa-circle-chevron-right"></i>
-          </button>
-          <span>
-            <h3>
-              <i class="fa-solid fa-paw"></i> 지금 부터 <br />친구를
-              <br />찾아보세요 !
-            </h3>
-            <span class="smallspan"> Click the button below to go there. </span>
-          </span>
-
-          <div id="petsitter-btn-box">
-            <button href="#" class="petsitter_search_btn">
-              <i class="fa-solid fa-dog"></i
-              ><i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-
-            <button href="#" class="petsitter_regist_btn">
-              <i class="fa-solid fa-address-card"></i>
-            </button>
-          </div>
-        </div>
-        <!-- article_board-->
-        <div class="article_board">
-          <div class="viewboard1">
-            <a href="#">공지사항게시판</a>
-          </div>
-          <div class="viewboard2">
-            <a href="#">회원리뷰게시판</a>
-          </div>
-          <div class="viewboard3">
-            <a href="#">실시간찾기게시판</a>
-          </div>
-          <div class="viewboard4">
-            <a href="#">실시간등록게시판</a>
-          </div>
-        </div>
-
-        <div class="article_image"></div>
-      </section>
-      <!-- //section -->
-
-      <!-- footer -->
-      <footer>
-        <div class="footer">
-          <p>
-            <span class="project_with">
-              &copy;2022 Web Project with KYJ, KKT, PJH, JSK, OCM, LHJ
-            </span>
-            <span class="homepage_tel"> Tel. 123-456-7890 | 123-456-7890 </span>
-          </p>
-          <p><a class="hompage_email">abcdefg@sigklmnop.com</a></p>
-          <p>
-            <span class="homepage_address">
-              서울특별시 서초구 1303-37 서초W타워 13층
-            </span>
-          </p>
-        </div>
-      </footer>
-      <!-- //footer -->
+    <div id="skip_nav" style="display: none">
+      <a href=".header">헤더 영역 바로가기</a>
+      <a href=".nav">메뉴 영역 바로가기</a>
+      <a href=".contents">컨텐츠 영역 바로가기</a>
+      <a href=".aricle-board">아티클보드 영영바로가기</a>
+      <a href=".footer">푸터 영역 바로가기</a>
     </div>
-    <script src="js/homePageStyle.js"></script>
+
+    <div id="wrap">
+      <!-- navbar -->
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <img class="navbar__logoicon" src="./img/sittermon_icon.png" />
+          <a href="">SITTERMON</a>
+        </div>
+        <div class="navbar__menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">갤러리</a></li>
+          <li><a href="">개시판</a></li>
+          <li><a href="">자주하는질문</a></li>
+          <li><a href="">고객센터</a></li>
+          <li><a href="">로그인</a></li>
+        </div>
+        <ul class="navbar__icons">
+          <li><i class="fa-brands fa-facebook-square"></i></li>
+          <li><i class="fa-brands fa-twitter"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+        </ul>
+        <a href="#" class="navbar__toogleBtn">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+      </nav>
+      <!-- // end navbar -->
+
+      <header></header>
+
+      <!-- 가운데 컨텐츠 -->
+      <contents>
+        <div id="container">
+          <!-- 이미지 슬라이드 -->
+          <div class="image_container">
+            <div class="image_box">
+              <img src="./img/img01.webp" />
+            </div>
+            <div class="image_box">
+              <img src="./img/img02.webp" />
+            </div>
+            <div class="image_box">
+              <img src="./img/img03.webp" />
+            </div>
+          </div>
+          <!-- // 이미지 슬라이드 -->
+          <!-- 이미지 슬라이드 버튼 -->
+          <div id="slide_btn_box">
+            <span id="prev_slide_btn"><img src="./img/left_arrow.png" /></span>
+            <span id="next_slide_btn"><img src="./img/right_arrow.png" /></span>
+          </div>
+          <!-- // 이미지 슬라이드 버튼  -->
+          <!-- 문구 -->
+          <span class="big_text"
+            ><i class="fa-solid fa-paw"></i> 지금 바로<br />
+            친구를 <br />찾아보세요!</span
+          >
+          <span class="small_text">Click the Chat button.</span>
+          <span type="button" class="chat_btn">
+            <i class="fa-solid fa-comments"></i>
+            LIVE CHAT
+          </span>
+          <!-- // 문구 -->
+          <!-- 클릭 & 터치 아이콘 -->
+          <span></span>
+          <span></span>
+          <!-- // 클릭 & 터치 아이콘  -->
+        </div>
+      </contents>
+      <!-- // 컨텐츠 -->
+      <article>
+        <div id="article_gallery"></div>
+      </article>
+      <footer></footer>
+    </div>
   </body>
 </html>

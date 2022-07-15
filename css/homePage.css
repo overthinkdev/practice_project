@@ -1,0 +1,245 @@
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  --accent-color: #f0c061;
+}
+@font-face {
+  font-family: "THEnewchildren";
+  src: url("../img/THEnewchildern.ttf") format("true");
+}
+
+/* 공용 선택자 */
+.hidden {
+  display: none;
+}
+body .nav__bar {
+  font-family: "Mingzat", sans-serif;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 8px 12px;
+}
+.navbar__log {
+  font-size: 24px;
+  color: var(--text-color);
+}
+.navbar__logo i {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+.navbar__menu {
+  display: flex;
+  padding-left: 0;
+}
+.navbar__menu li {
+  padding: 8px 12px;
+}
+.navbar__menu li:hover {
+  background-color: var(--accent-color);
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.5s ease 0s;
+}
+.navbar__logoicon {
+  width: 20%;
+  height: 20%;
+}
+.navbar__icons {
+  color: white;
+  display: flex;
+  padding-left: 0;
+}
+.navbar__icons li {
+  padding: 8px 12px;
+}
+.navbar__icons li:hover {
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--accent-color);
+  transition: color 0.5s ease 0s;
+}
+.navbar__loginBtn {
+  font-weight: bold;
+  right: 64px;
+}
+.navbar__loginBtn:hover {
+  color: var(--accent-color);
+  transition: color 0.5s ease 0s;
+}
+
+.navbar__toogleBtn {
+  display: none;
+  position: absolute;
+  font-size: 24px;
+  right: 32px;
+  color: var(--text-color);
+}
+.navbar__toogleBtn:hover {
+  color: var(--accent-color);
+  transition: color 0.5s ease 0s;
+}
+header {
+  height: 0.03vw;
+  width: 100vw;
+}
+/* 컨텐츠 컨테이너 */
+#container {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* 스킵 네비게이션 */
+
+/* 이미지 컨테이너 */
+.image_container {
+  width: 300vw;
+  transition: transform 0.5s;
+}
+.image_container::after {
+  clear: both;
+}
+
+.image_box {
+  width: 100vw;
+  float: left;
+}
+.image_box img {
+  width: 100%;
+}
+/* 슬라이드버튼 */
+#slide_btn_box {
+  position: absolute;
+  width: 100%;
+  top: 15vw;
+}
+#prev_slide_btn img,
+#next_slide_btn img {
+  filter: invert(100%) sepia(5%) saturate(5791%) hue-rotate(342deg)
+    brightness(118%) contrast(102%);
+  padding: 0;
+  width: 20px;
+  height: 50px;
+}
+
+#prev_slide_btn img:hover,
+#next_slide_btn img:hover {
+  transition: all 0.5s ease 0s;
+  filter: invert(41%) sepia(12%) saturate(28%) hue-rotate(317deg)
+    brightness(92%) contrast(92%);
+  cursor: pointer;
+}
+
+#prev_slide_btn img {
+  position: absolute;
+  left: 2vw;
+  z-index: 200;
+}
+#next_slide_btn img {
+  position: absolute;
+  right: 2vw;
+  z-index: 200;
+}
+/* 가운데 문구 */
+.big_text {
+  position: absolute;
+  width: 100%;
+  top: 12vw;
+  left: 1vw;
+  font-family: "THEnewchildren";
+  font-size: 3vw;
+  font-weight: bold;
+  color: var(--text-color);
+  text-align: center;
+  line-height: 3vw;
+}
+.small_text {
+  position: absolute;
+  width: 100%;
+  top: 27vw;
+  left: 1vw;
+  font-family: "THEnewchildren";
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1vw;
+  font-weight: normal;
+}
+.chat_btn {
+  position: fixed;
+  top: 60%;
+  right: 1%;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 3vw;
+  color: var(--text-color);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.chat_btn:hover {
+  background-color: rgba(240, 192, 97, 0.9);
+  border-radius: 4%;
+  font-size: 5vw;
+
+  transition: all 0.5s ease 0s;
+}
+/* 찾기, 등록하기 버튼 */
+
+/* footer */
+footer {
+  background-color: #99ccff;
+}
+/*---------------------------------------------------------------------------------------------------*/
+/* 테블릿, 모바일 가로*/
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar__icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar__toogleBtn {
+    display: block;
+  }
+  .navbar__menu.active,
+  .navbar__icons.active {
+    display: flex;
+  }
+  #contents_text_box {
+    font-size: 1vw;
+  }
+  .chat_btn {
+    top: 90%;
+  }
+  .big_text {
+    font-size: 5vw;
+    line-height: 5vw;
+  }
+  .small_text {
+    top: 30vw;
+    left: 1vw;
+    font-size: 3vw;
+  }
+}
